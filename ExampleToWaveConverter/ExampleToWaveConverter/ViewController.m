@@ -68,8 +68,8 @@
     urlOutputFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];
     if ([self symbolCheck]) {
         
-        {[[CSAudioConverter sharedInstance] convertInput:urlInput.path
-                                                toOutput:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];}
+        [[CSAudioConverter sharedInstance] convertInput:urlInput.path
+                                               toOutput:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];
         [self showUrl:urlOutputFile];
     }
 }
