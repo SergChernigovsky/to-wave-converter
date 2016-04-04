@@ -14,6 +14,7 @@
 		D56CEE7F1CB278E000A97A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56CEE7D1CB278E000A97A37 /* Main.storyboard */; };
 		D56CEE8A1CB278E000A97A37 /* ExampleToWaveConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE891CB278E000A97A37 /* ExampleToWaveConverterTests.m */; };
 		D56CEE951CB278E000A97A37 /* ExampleToWaveConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE941CB278E000A97A37 /* ExampleToWaveConverterUITests.m */; };
+		D56CEEA41CB278F100A97A37 /* CSAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEEA31CB278F100A97A37 /* CSAudioConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		D56CEE901CB278E000A97A37 /* ExampleToWaveConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleToWaveConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56CEE941CB278E000A97A37 /* ExampleToWaveConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleToWaveConverterUITests.m; sourceTree = "<group>"; };
 		D56CEE961CB278E000A97A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56CEEA21CB278F100A97A37 /* CSAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAudioConverter.h; sourceTree = "<group>"; };
+		D56CEEA31CB278F100A97A37 /* CSAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAudioConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 		D56CEE711CB278E000A97A37 /* ExampleToWaveConverter */ = {
 			isa = PBXGroup;
 			children = (
+				D56CEEA21CB278F100A97A37 /* CSAudioConverter.h */,
+				D56CEEA31CB278F100A97A37 /* CSAudioConverter.m */,
 				D56CEE721CB278E000A97A37 /* AppDelegate.h */,
 				D56CEE731CB278E000A97A37 /* AppDelegate.m */,
 				D56CEE781CB278E000A97A37 /* ViewController.h */,
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56CEE7A1CB278E000A97A37 /* ViewController.m in Sources */,
+				D56CEEA41CB278F100A97A37 /* CSAudioConverter.m in Sources */,
 				D56CEE771CB278E000A97A37 /* main.m in Sources */,
 				D56CEE741CB278E000A97A37 /* AppDelegate.m in Sources */,
 			);

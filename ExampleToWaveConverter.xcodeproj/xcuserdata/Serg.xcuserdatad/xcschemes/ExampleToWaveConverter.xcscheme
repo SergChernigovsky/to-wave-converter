@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D56CEE6E1CB278E000A97A37"
+               BuildableName = "ExampleToWaveConverter.app"
+               BlueprintName = "ExampleToWaveConverter"
+               ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D56CEE841CB278E000A97A37"
+               BuildableName = "ExampleToWaveConverterTests.xctest"
+               BlueprintName = "ExampleToWaveConverterTests"
+               ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D56CEE8F1CB278E000A97A37"
+               BuildableName = "ExampleToWaveConverterUITests.xctest"
+               BlueprintName = "ExampleToWaveConverterUITests"
+               ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D56CEE6E1CB278E000A97A37"
+            BuildableName = "ExampleToWaveConverter.app"
+            BlueprintName = "ExampleToWaveConverter"
+            ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D56CEE6E1CB278E000A97A37"
+            BuildableName = "ExampleToWaveConverter.app"
+            BlueprintName = "ExampleToWaveConverter"
+            ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D56CEE6E1CB278E000A97A37"
+            BuildableName = "ExampleToWaveConverter.app"
+            BlueprintName = "ExampleToWaveConverter"
+            ReferencedContainer = "container:ExampleToWaveConverter.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

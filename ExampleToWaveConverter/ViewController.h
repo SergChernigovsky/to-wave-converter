@@ -7,9 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CSAudioConverter.h"
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSButton *buttonOpen;
+@property (weak) IBOutlet NSButton *buttonConvert;
+@property (weak) IBOutlet NSButton *buttonOutput;
+@property (weak) IBOutlet NSButton *buttonShow;
+@property (unsafe_unretained) IBOutlet NSTextView *textInput;
+@property (unsafe_unretained) IBOutlet NSTextView *textOutput;
 
 @end
 
