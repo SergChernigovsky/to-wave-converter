@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D56CEE741CB278E000A97A37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE731CB278E000A97A37 /* AppDelegate.m */; };
+		D56CEE771CB278E000A97A37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE761CB278E000A97A37 /* main.m */; };
+		D56CEE7A1CB278E000A97A37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE791CB278E000A97A37 /* ViewController.m */; };
+		D56CEE7C1CB278E000A97A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56CEE7B1CB278E000A97A37 /* Assets.xcassets */; };
+		D56CEE7F1CB278E000A97A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56CEE7D1CB278E000A97A37 /* Main.storyboard */; };
+		D56CEE8A1CB278E000A97A37 /* ExampleToWaveConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE891CB278E000A97A37 /* ExampleToWaveConverterTests.m */; };
+		D56CEE951CB278E000A97A37 /* ExampleToWaveConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CEE941CB278E000A97A37 /* ExampleToWaveConverterUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D56CEE861CB278E000A97A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56CEE671CB278E000A97A37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56CEE6E1CB278E000A97A37;
+			remoteInfo = ExampleToWaveConverter;
+		};
+		D56CEE911CB278E000A97A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56CEE671CB278E000A97A37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56CEE6E1CB278E000A97A37;
+			remoteInfo = ExampleToWaveConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D56CEE6F1CB278E000A97A37 /* ExampleToWaveConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleToWaveConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56CEE721CB278E000A97A37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D56CEE731CB278E000A97A37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D56CEE761CB278E000A97A37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D56CEE781CB278E000A97A37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D56CEE791CB278E000A97A37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D56CEE7B1CB278E000A97A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D56CEE7E1CB278E000A97A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D56CEE801CB278E000A97A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56CEE851CB278E000A97A37 /* ExampleToWaveConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleToWaveConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56CEE891CB278E000A97A37 /* ExampleToWaveConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleToWaveConverterTests.m; sourceTree = "<group>"; };
+		D56CEE8B1CB278E000A97A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56CEE901CB278E000A97A37 /* ExampleToWaveConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleToWaveConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56CEE941CB278E000A97A37 /* ExampleToWaveConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleToWaveConverterUITests.m; sourceTree = "<group>"; };
+		D56CEE961CB278E000A97A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D56CEE6C1CB278E000A97A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE821CB278E000A97A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE8D1CB278E000A97A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D56CEE661CB278E000A97A37 = {
+			isa = PBXGroup;
+			children = (
+				D56CEE711CB278E000A97A37 /* ExampleToWaveConverter */,
+				D56CEE881CB278E000A97A37 /* ExampleToWaveConverterTests */,
+				D56CEE931CB278E000A97A37 /* ExampleToWaveConverterUITests */,
+				D56CEE701CB278E000A97A37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D56CEE701CB278E000A97A37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D56CEE6F1CB278E000A97A37 /* ExampleToWaveConverter.app */,
+				D56CEE851CB278E000A97A37 /* ExampleToWaveConverterTests.xctest */,
+				D56CEE901CB278E000A97A37 /* ExampleToWaveConverterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D56CEE711CB278E000A97A37 /* ExampleToWaveConverter */ = {
+			isa = PBXGroup;
+			children = (
+				D56CEE721CB278E000A97A37 /* AppDelegate.h */,
+				D56CEE731CB278E000A97A37 /* AppDelegate.m */,
+				D56CEE781CB278E000A97A37 /* ViewController.h */,
+				D56CEE791CB278E000A97A37 /* ViewController.m */,
+				D56CEE7B1CB278E000A97A37 /* Assets.xcassets */,
+				D56CEE7D1CB278E000A97A37 /* Main.storyboard */,
+				D56CEE801CB278E000A97A37 /* Info.plist */,
+				D56CEE751CB278E000A97A37 /* Supporting Files */,
+			);
+			path = ExampleToWaveConverter;
+			sourceTree = "<group>";
+		};
+		D56CEE751CB278E000A97A37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D56CEE761CB278E000A97A37 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D56CEE881CB278E000A97A37 /* ExampleToWaveConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				D56CEE891CB278E000A97A37 /* ExampleToWaveConverterTests.m */,
+				D56CEE8B1CB278E000A97A37 /* Info.plist */,
+			);
+			path = ExampleToWaveConverterTests;
+			sourceTree = "<group>";
+		};
+		D56CEE931CB278E000A97A37 /* ExampleToWaveConverterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D56CEE941CB278E000A97A37 /* ExampleToWaveConverterUITests.m */,
+				D56CEE961CB278E000A97A37 /* Info.plist */,
+			);
+			path = ExampleToWaveConverterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D56CEE6E1CB278E000A97A37 /* ExampleToWaveConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56CEE991CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverter" */;
+			buildPhases = (
+				D56CEE6B1CB278E000A97A37 /* Sources */,
+				D56CEE6C1CB278E000A97A37 /* Frameworks */,
+				D56CEE6D1CB278E000A97A37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleToWaveConverter;
+			productName = ExampleToWaveConverter;
+			productReference = D56CEE6F1CB278E000A97A37 /* ExampleToWaveConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D56CEE841CB278E000A97A37 /* ExampleToWaveConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56CEE9C1CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverterTests" */;
+			buildPhases = (
+				D56CEE811CB278E000A97A37 /* Sources */,
+				D56CEE821CB278E000A97A37 /* Frameworks */,
+				D56CEE831CB278E000A97A37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D56CEE871CB278E000A97A37 /* PBXTargetDependency */,
+			);
+			name = ExampleToWaveConverterTests;
+			productName = ExampleToWaveConverterTests;
+			productReference = D56CEE851CB278E000A97A37 /* ExampleToWaveConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D56CEE8F1CB278E000A97A37 /* ExampleToWaveConverterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56CEE9F1CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverterUITests" */;
+			buildPhases = (
+				D56CEE8C1CB278E000A97A37 /* Sources */,
+				D56CEE8D1CB278E000A97A37 /* Frameworks */,
+				D56CEE8E1CB278E000A97A37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D56CEE921CB278E000A97A37 /* PBXTargetDependency */,
+			);
+			name = ExampleToWaveConverterUITests;
+			productName = ExampleToWaveConverterUITests;
+			productReference = D56CEE901CB278E000A97A37 /* ExampleToWaveConverterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D56CEE671CB278E000A97A37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = My;
+				TargetAttributes = {
+					D56CEE6E1CB278E000A97A37 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D56CEE841CB278E000A97A37 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D56CEE6E1CB278E000A97A37;
+					};
+					D56CEE8F1CB278E000A97A37 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D56CEE6E1CB278E000A97A37;
+					};
+				};
+			};
+			buildConfigurationList = D56CEE6A1CB278E000A97A37 /* Build configuration list for PBXProject "ExampleToWaveConverter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D56CEE661CB278E000A97A37;
+			productRefGroup = D56CEE701CB278E000A97A37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D56CEE6E1CB278E000A97A37 /* ExampleToWaveConverter */,
+				D56CEE841CB278E000A97A37 /* ExampleToWaveConverterTests */,
+				D56CEE8F1CB278E000A97A37 /* ExampleToWaveConverterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D56CEE6D1CB278E000A97A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56CEE7C1CB278E000A97A37 /* Assets.xcassets in Resources */,
+				D56CEE7F1CB278E000A97A37 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE831CB278E000A97A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE8E1CB278E000A97A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D56CEE6B1CB278E000A97A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56CEE7A1CB278E000A97A37 /* ViewController.m in Sources */,
+				D56CEE771CB278E000A97A37 /* main.m in Sources */,
+				D56CEE741CB278E000A97A37 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE811CB278E000A97A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56CEE8A1CB278E000A97A37 /* ExampleToWaveConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56CEE8C1CB278E000A97A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56CEE951CB278E000A97A37 /* ExampleToWaveConverterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D56CEE871CB278E000A97A37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56CEE6E1CB278E000A97A37 /* ExampleToWaveConverter */;
+			targetProxy = D56CEE861CB278E000A97A37 /* PBXContainerItemProxy */;
+		};
+		D56CEE921CB278E000A97A37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56CEE6E1CB278E000A97A37 /* ExampleToWaveConverter */;
+			targetProxy = D56CEE911CB278E000A97A37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D56CEE7D1CB278E000A97A37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D56CEE7E1CB278E000A97A37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D56CEE971CB278E000A97A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D56CEE981CB278E000A97A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D56CEE9A1CB278E000A97A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D56CEE9B1CB278E000A97A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D56CEE9D1CB278E000A97A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleToWaveConverter.app/Contents/MacOS/ExampleToWaveConverter";
+			};
+			name = Debug;
+		};
+		D56CEE9E1CB278E000A97A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleToWaveConverter.app/Contents/MacOS/ExampleToWaveConverter";
+			};
+			name = Release;
+		};
+		D56CEEA01CB278E000A97A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ExampleToWaveConverter;
+			};
+			name = Debug;
+		};
+		D56CEEA11CB278E000A97A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ExampleToWaveConverterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.ExampleToWaveConverterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ExampleToWaveConverter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D56CEE6A1CB278E000A97A37 /* Build configuration list for PBXProject "ExampleToWaveConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56CEE971CB278E000A97A37 /* Debug */,
+				D56CEE981CB278E000A97A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56CEE991CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56CEE9A1CB278E000A97A37 /* Debug */,
+				D56CEE9B1CB278E000A97A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D56CEE9C1CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56CEE9D1CB278E000A97A37 /* Debug */,
+				D56CEE9E1CB278E000A97A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D56CEE9F1CB278E000A97A37 /* Build configuration list for PBXNativeTarget "ExampleToWaveConverterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56CEEA01CB278E000A97A37 /* Debug */,
+				D56CEEA11CB278E000A97A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D56CEE671CB278E000A97A37 /* Project object */;
+}
