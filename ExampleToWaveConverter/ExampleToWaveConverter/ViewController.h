@@ -17,6 +17,8 @@
 @property (weak) IBOutlet NSButton *buttonShow;
 @property (unsafe_unretained) IBOutlet NSTextView *textInput;
 @property (unsafe_unretained) IBOutlet NSTextView *textOutput;
+@property (weak) IBOutlet NSVisualEffectView *viewBlur;
+@property (weak) IBOutlet NSProgressIndicator *spin;
 
 @end
 

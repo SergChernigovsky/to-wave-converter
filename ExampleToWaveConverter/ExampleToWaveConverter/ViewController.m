@@ -65,13 +65,21 @@
 }
 
 - (IBAction)convert:(id)sender {
+    _viewBlur.hidden = NO;
     urlOutputFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];
-    if ([self symbolCheck]) {
-        
-        [[CSAudioConverter sharedInstance] convertInput:urlInput.path
-                                               toOutput:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];
-        [self showUrl:urlOutputFile];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        //Background Thread
+        if ([self symbolCheck]) {
+            
+            [[CSAudioConverter sharedInstance] convertInput:urlInput.path
+                                                   toOutput:[NSString stringWithFormat:@"%@/output.wav", urlOutput.path]];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            //Run UI Updates
+            _viewBlur.hidden = YES;
+            [self showUrl:urlOutputFile];
+        });
+    });
 }
 
 - (IBAction)show:(id)sender {
