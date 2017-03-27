@@ -34,30 +34,30 @@ typedef struct MyAudioConverterSettings {
 static void CheckError(OSStatus error, const char *operation) {
     if (error == noErr) return;
     char errorString[20];
-    // Смотрим, похоже ли на 4-значный код
+    // Look, does the 4 digit code
     *(UInt32 *)(errorString + 1) = CFSwapInt32HostToBig(error);
     if (isprint(errorString[1]) && isprint(errorString[2]) && isprint(errorString[3]) && isprint(errorString[4]))
     {
         errorString[0] = errorString[5] = '\''; errorString[6] = '\0';
     } else
-        // Нет, форматируем как целое число
+        // No, formatted as an integer
         sprintf(errorString, "%d", (int)error);
-    fprintf(stderr, "Ошибка: %s (%s)\n", operation, errorString);
+    fprintf(stderr, "Error: %s (%s)\n", operation, errorString);
     exit(1);
 }
 
 void Convert(MyAudioConverterSettings *mySettings) {
-    // Создать объект audioConverter
+    // To create an object audioConverter
     AudioConverterRef audioConverter;
     NSLog(@"sizePerPacket = %i", mySettings->inputFormat.mBytesPerPacket);
-    CheckError (AudioConverterNew(&mySettings->inputFormat, &mySettings->outputFormat, &audioConverter), "ошибка AudioConveterNew");
+    CheckError (AudioConverterNew(&mySettings->inputFormat, &mySettings->outputFormat, &audioConverter), "error AudioConveterNew");
     UInt32 packetsPerBuffer = 0;
-    UInt32 outputBufferSize = 32 * 1024; // 32 КБ – неплохая отправная точка
+    UInt32 outputBufferSize = 32 * 1024; // 32 kb – a good starting point
     UInt32 sizePerPacket = mySettings->inputFormat.mBytesPerPacket; //0
     if (sizePerPacket == 0)
     {
         UInt32 size = sizeof(sizePerPacket);
-        CheckError(AudioConverterGetProperty(audioConverter, kAudioConverterPropertyMaximumOutputPacketSize, &size, &sizePerPacket), "не могу получить kAudioConverterPropertyMaximumOutputPacketSize");
+        CheckError(AudioConverterGetProperty(audioConverter, kAudioConverterPropertyMaximumOutputPacketSize, &size, &sizePerPacket), "are unable to kAudioConverterPropertyMaximumOutputPacketSize");
         NSLog(@"sizePerPacket = %i", sizePerPacket);
         if (sizePerPacket > outputBufferSize)
             outputBufferSize = sizePerPacket;
@@ -90,11 +90,11 @@ void Convert(MyAudioConverterSettings *mySettings) {
                                                                           mySettings->inputFilePacketDescriptions : nil));
         if (error || !ioOutputDataPackets)
         {
-            break; // Это условие выхода из цикла
+            break; // This is the exit condition of the loop
         }
-        CheckError (AudioFileWritePackets(mySettings->outputFile, FALSE, ioOutputDataPackets, NULL, outputFilePacketPosition / mySettings->outputFormat.mBytesPerPacket, &ioOutputDataPackets, convertedData.mBuffers[0].mData), "не могу записать пакеты в файл");
+        CheckError (AudioFileWritePackets(mySettings->outputFile, FALSE, ioOutputDataPackets, NULL, outputFilePacketPosition / mySettings->outputFormat.mBytesPerPacket, &ioOutputDataPackets, convertedData.mBuffers[0].mData), "can't log packets to a file");
         outputFilePacketPosition += (ioOutputDataPackets * mySettings->outputFormat.mBytesPerPacket);
-        NSLog(@"шаг = %i", (ioOutputDataPackets * mySettings->outputFormat.mBytesPerPacket)/2);
+        NSLog(@"step = %i", (ioOutputDataPackets * mySettings->outputFormat.mBytesPerPacket)/2);
         NSLog(@"mBytesPerPacket = %i", mySettings->outputFormat.mBytesPerPacket);
         NSLog(@"ioOutputDataPackets = %i", outputFilePacketPosition);
     }
@@ -139,16 +139,16 @@ OSStatus MyAudioConverterCallback(AudioConverterRef inAudioConverter,
     MyAudioConverterSettings audioConverterSettings = {0};
     CFStringRef inputFile = (__bridge CFStringRef)myFile;
     CFURLRef inputFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, inputFile, kCFURLPOSIXPathStyle,false);
-    CheckError (AudioFileOpenURL(inputFileURL, kAudioFileReadPermission, 0, &audioConverterSettings.inputFile), "ошибка AudioFileOpenURL");
+    CheckError (AudioFileOpenURL(inputFileURL, kAudioFileReadPermission, 0, &audioConverterSettings.inputFile), "error AudioFileOpenURL");
     CFRelease(inputFileURL);
     UInt32 propSize = sizeof(audioConverterSettings.inputFormat);
-    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyDataFormat, &propSize, &audioConverterSettings.inputFormat),"не могу получить формат данных в файле");
-    // получить полное число пакетов в файле
+    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyDataFormat, &propSize, &audioConverterSettings.inputFormat),"can't get the format of the data in the file");
+    // get the total number of packets in the file
     propSize = sizeof(audioConverterSettings.inputFilePacketCount);
-    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyAudioDataPacketCount, &propSize, &audioConverterSettings.inputFilePacketCount), "не могу получить количество пакетов в файле");
-    // получить размер максимально возможного пакета
+    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyAudioDataPacketCount, &propSize, &audioConverterSettings.inputFilePacketCount), "can't get the number of packets in the file");
+    // get the maximum possible package
     propSize = sizeof(audioConverterSettings.inputFilePacketMaxSize);
-    CheckError(AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyMaximumPacketSize, &propSize, &audioConverterSettings.inputFilePacketMaxSize), "не могу получить размер максимального пакета");
+    CheckError(AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyMaximumPacketSize, &propSize, &audioConverterSettings.inputFilePacketMaxSize), "can't get the size of the maximum packet");
     
     // WAVE
         audioConverterSettings.outputFormat.mSampleRate = 44100.0;
@@ -162,31 +162,31 @@ OSStatus MyAudioConverterCallback(AudioConverterRef inAudioConverter,
      
         CFStringRef outputFile = (__bridge CFStringRef)newFile;
         CFURLRef outputFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, outputFile, kCFURLPOSIXPathStyle, false);
-        CheckError (AudioFileCreateWithURL(outputFileURL, kAudioFileWAVEType, &audioConverterSettings.outputFormat, kAudioFileFlags_EraseFile, &audioConverterSettings.outputFile),"ошибка AudioFileCreateWithURL");
+        CheckError (AudioFileCreateWithURL(outputFileURL, kAudioFileWAVEType, &audioConverterSettings.outputFormat, kAudioFileFlags_EraseFile, &audioConverterSettings.outputFile),"error AudioFileCreateWithURL");
         CFRelease(outputFileURL);
 
-    fprintf(stdout, "Идет преобразование в lpcm...\n");
+    fprintf(stdout, "Converting in lpcm...\n");
     
     Convert(&audioConverterSettings);
 cleanup:
     AudioFileClose(audioConverterSettings.inputFile);
     AudioFileClose(audioConverterSettings.outputFile);
-    fprintf(stdout, "Преобразование в lpcm завершено!");
+    fprintf(stdout, "Conversion to lpcm is complete!");
 }
 
 - (AudioStreamBasicDescription) getASBD: (NSString*) myFile{
     MyAudioConverterSettings audioConverterSettings = {0};
     CFURLRef inputFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)myFile, kCFURLPOSIXPathStyle,false);
-    CheckError (AudioFileOpenURL(inputFileURL, kAudioFileReadPermission, 0, &audioConverterSettings.inputFile), "ошибка AudioFileOpenURL");
+    CheckError (AudioFileOpenURL(inputFileURL, kAudioFileReadPermission, 0, &audioConverterSettings.inputFile), "erroe AudioFileOpenURL");
     CFRelease(inputFileURL);
     UInt32 propSize = sizeof(audioConverterSettings.inputFormat);
-    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyDataFormat, &propSize, &audioConverterSettings.inputFormat),"не могу получить формат данных в файле");
-    // получить полное число пакетов в файле
+    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyDataFormat, &propSize, &audioConverterSettings.inputFormat),"can't get the format of the data in the file");
+    // get the total number of packets in the file
     propSize = sizeof(audioConverterSettings.inputFilePacketCount);
-    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyAudioDataPacketCount, &propSize, &audioConverterSettings.inputFilePacketCount), "не могу получить количество пакетов в файле");
-    // получить размер максимально возможного пакета
+    CheckError (AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyAudioDataPacketCount, &propSize, &audioConverterSettings.inputFilePacketCount), "can't get the number of packets in the file");
+    // get obtain the maximum possible package
     propSize = sizeof(audioConverterSettings.inputFilePacketMaxSize);
-    CheckError(AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyMaximumPacketSize, &propSize, &audioConverterSettings.inputFilePacketMaxSize), "не могу получить размер максимального пакета");
+    CheckError(AudioFileGetProperty(audioConverterSettings.inputFile, kAudioFilePropertyMaximumPacketSize, &propSize, &audioConverterSettings.inputFilePacketMaxSize), "can't get the size of the maximum packet");
     return audioConverterSettings.inputFormat;
 }
 

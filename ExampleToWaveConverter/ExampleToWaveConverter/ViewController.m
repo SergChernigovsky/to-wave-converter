@@ -30,7 +30,7 @@
 
 - (IBAction)open:(id)sender {
     NSOpenPanel *openDlg = [NSOpenPanel openPanel];
-    // Свойства диалога
+    // Properties dialogue
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:NO];
     [openDlg setAllowsMultipleSelection:NO];
@@ -55,7 +55,7 @@
                                   @"au",
                                   @"snd",
                                   nil]];
-    // Если запуск вернул нажатие кнопки OK - обработать выбранные файлы
+    // When the launch returned the OK button to process the selected files
     if ( [openDlg runModal] == NSFileHandlingPanelOKButton ) {
         urlInput = [openDlg URL];
         _textInput.string = urlInput.path;
@@ -90,11 +90,11 @@
 }
 - (IBAction)output:(id)sender {
     NSOpenPanel *openDlg = [NSOpenPanel openPanel];
-    // Свойства диалога
+    // Properties dialogue
     [openDlg setCanChooseFiles:NO];
     [openDlg setCanChooseDirectories:YES];
     [openDlg setAllowsMultipleSelection:NO];
-    // Если запуск вернул нажатие кнопки OK - обработать выбранные файлы
+    // When the launch returned the OK button to process the selected files
     if ( [openDlg runModal] == NSFileHandlingPanelOKButton ) {
         urlOutput = [openDlg URL];
         _textOutput.string = urlOutput.path;
